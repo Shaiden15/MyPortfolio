@@ -1,0 +1,69 @@
+/* Screenshot slots and their initials placeholder.
+   Part of the Shaiden Pillay portfolio stylesheet.
+   Load order is fixed in index.html — the cascade depends on it. */
+
+/* ══ 11. Card media (screenshots) ════════════════════════ */
+
+.card-media {
+  position: relative;
+  margin: -1.6rem -1.6rem 1.3rem;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  background: linear-gradient(135deg, var(--accent-soft), var(--bg-alt));
+  border-bottom: 1px solid var(--border-soft);
+}
+/* placeholder shown until a real screenshot is dropped in */
+.card-media::after {
+  content: attr(data-initials);
+  position: absolute; inset: 0;
+  display: grid; place-items: center;
+  font-family: var(--font-mono);
+  font-size: 2.6rem; font-weight: 600;
+  letter-spacing: -.04em;
+  color: var(--accent);
+  opacity: .28;
+}
+.card-media img {
+  position: relative; z-index: 1;
+  width: 100%; height: 100%;
+  object-fit: cover; object-position: top center;
+  display: block;
+  /* Hidden until JS confirms the file actually loaded, so a screenshot that
+     has not been added yet never flashes a broken-image icon. */
+  opacity: 0;
+  color: transparent;
+  transition: opacity .4s var(--ease), transform .6s var(--ease);
+}
+.card-media.has-shot img { opacity: 1; }
+.card-media.no-shot img { display: none; }
+.card-media.has-shot { cursor: zoom-in; }
+.card:hover .card-media.has-shot img { transform: scale(1.04); }
+
+.card-media.has-shot::before {
+  content: "";
+  position: absolute; inset: 0; z-index: 2;
+  background: linear-gradient(to top, rgba(0,0,0,.28), transparent 45%);
+  opacity: 0; transition: opacity .35s var(--ease);
+}
+.card:hover .card-media.has-shot::before { opacity: 1; }
+
+/* lightbox */
+.lightbox {
+  width: min(1100px, calc(100vw - 2rem));
+  max-height: calc(100vh - 4rem);
+  margin: auto;
+  background: transparent;
+  overflow: visible;
+}
+.lightbox[open] {
+  display: flex; flex-direction: column; align-items: center; gap: .9rem;
+  animation: pop .28s var(--ease);
+}
+.lightbox img {
+  max-width: 100%; max-height: 78vh;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-pop);
+}
+.lightbox-cap { font-family: var(--font-mono); font-size: .8rem; color: var(--text-muted); margin: 0; }
+.lightbox-close { position: absolute; top: -14px; right: -14px; z-index: 3; background: var(--surface); }

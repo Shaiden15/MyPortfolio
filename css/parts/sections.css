@@ -1,0 +1,97 @@
+/* Section shells, about grid, experience timeline.
+   Part of the Shaiden Pillay portfolio stylesheet.
+   Load order is fixed in index.html — the cascade depends on it. */
+
+/* ══ 5. Sections, about, timeline ════════════════════════ */
+
+.section { padding-block: var(--pad-section); }
+.section-alt { background: var(--bg-alt); border-block: 1px solid var(--border-soft); }
+
+.section-head h2 {
+  font-size: var(--fs-h2); font-weight: 700;
+  letter-spacing: -.035em; max-width: 18ch;
+  text-wrap: balance;
+}
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: minmax(0, .85fr) minmax(0, 1.4fr);
+  gap: clamp(2.25rem, 6vw, 5rem);
+  align-items: start;
+}
+@media (max-width: 880px) {
+  .grid-2 { grid-template-columns: 1fr; }
+  .section-head h2 { max-width: 24ch; }
+}
+
+.prose p { color: var(--text-2); max-width: 60ch; font-size: 1.02rem; }
+.prose p:last-child { margin-bottom: 0; }
+
+.subhead {
+  display: flex; align-items: center; gap: 1rem;
+  font-size: 1.05rem; font-weight: 600;
+  margin: 4rem 0 1.5rem;
+}
+.subhead::after { content: ""; flex: 1; height: 1px; background: var(--border); }
+.subhead-tight { margin-top: 2.75rem; }
+
+/* value cards */
+.values {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.25rem;
+  margin-top: clamp(2.5rem, 6vw, 4rem);
+}
+.values li {
+  padding: 1.5rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  transition: border-color .3s var(--ease), transform .3s var(--ease);
+}
+.values li:hover { border-color: color-mix(in srgb, var(--accent) 35%, var(--border)); transform: translateY(-3px); }
+.value-icon {
+  display: grid; place-items: center;
+  width: 38px; height: 38px;
+  border-radius: 10px;
+  background: var(--accent-soft);
+  color: var(--accent);
+  margin-bottom: 1rem;
+}
+.value-icon svg { width: 19px; height: 19px; }
+.values h3 { font-size: 1rem; margin-bottom: .4rem; }
+.values p { color: var(--text-muted); font-size: .9rem; margin: 0; }
+
+/* timeline */
+.timeline { position: relative; margin-top: 2.75rem; padding-left: 1.75rem; }
+.timeline::before {
+  content: ""; position: absolute; left: 5px; top: 8px; bottom: 8px;
+  width: 1px;
+  background: linear-gradient(var(--accent), var(--border) 60%, transparent);
+}
+.tl-item { position: relative; padding-bottom: 2rem; }
+.tl-item:last-child { padding-bottom: 0; }
+.tl-marker {
+  position: absolute; left: -1.75rem; top: 6px;
+  width: 11px; height: 11px; border-radius: 50%;
+  background: var(--bg-alt);
+  border: 2px solid var(--accent);
+}
+.tl-item:first-child .tl-marker {
+  background: var(--accent);
+  box-shadow: 0 0 0 4px color-mix(in srgb, var(--accent) 18%, transparent);
+}
+.tl-date {
+  font-family: var(--font-mono); font-size: .75rem;
+  letter-spacing: .05em; color: var(--accent);
+  margin-bottom: .4rem;
+}
+.tl-body h3 { font-size: 1.2rem; }
+.tl-org { color: var(--text-muted); font-size: .92rem; margin: .3rem 0 .8rem; }
+.tl-text { color: var(--text-2); max-width: 68ch; margin-bottom: 1rem; }
+.tl-tags { display: flex; flex-wrap: wrap; gap: .4rem; }
+.tl-tags li {
+  font-family: var(--font-mono); font-size: .71rem;
+  padding: .22rem .55rem; border-radius: 999px;
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+}

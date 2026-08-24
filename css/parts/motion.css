@@ -1,0 +1,32 @@
+/* Scroll reveal, reduced motion, print stylesheet.
+   Part of the Shaiden Pillay portfolio stylesheet.
+   Load order is fixed in index.html — the cascade depends on it. */
+
+/* ══ 15. Motion + print ══════════════════════════════════ */
+
+.reveal { opacity: 0; transform: translateY(18px); transition: opacity .7s var(--ease), transform .7s var(--ease); }
+.reveal.is-in { opacity: 1; transform: none; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .reveal { opacity: 1; transform: none; transition: none; }
+  .rotate-track, .orb, .h1-accent, .pill-dot, .badge-dot { animation: none !important; }
+  .role-rotate { height: auto; }
+  *, *::before, *::after {
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .01ms !important;
+  }
+}
+
+@media print {
+  .site-header, .hero-bg, .hero-actions, .skip-link, .progress,
+  .to-top, .filters, .card-foot, .drawer, dialog, .toast, .contact-glow,
+  .contact-form, .card-media { display: none !important; }
+  body { background: #fff; color: #000; font-size: 11pt; }
+  .section { padding-block: 1.25rem; break-inside: avoid; }
+  .card, .values li, .skill-card, .hero-panel { box-shadow: none; border: 1px solid #ccc; break-inside: avoid; }
+  .card.is-hidden { display: flex !important; }
+  .reveal { opacity: 1 !important; transform: none !important; }
+  a { color: #000; }
+}

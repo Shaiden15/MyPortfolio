@@ -1,0 +1,132 @@
+/* Project grid, filter chips, card chrome.
+   Part of the Shaiden Pillay portfolio stylesheet.
+   Load order is fixed in index.html — the cascade depends on it. */
+
+/* ══ 6. Projects + filters ═══════════════════════════════ */
+
+.projects-head {
+  display: flex; flex-wrap: wrap; gap: 1.5rem 2rem;
+  align-items: flex-end; justify-content: space-between;
+}
+
+.filters { display: flex; flex-wrap: wrap; gap: .45rem; }
+.chip {
+  display: inline-flex; align-items: center; gap: .45rem;
+  padding: .42rem .85rem;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--surface);
+  color: var(--text-2);
+  font-size: .82rem; font-weight: 500;
+  cursor: pointer;
+  transition: all .22s var(--ease);
+}
+.chip:hover { border-color: var(--accent); color: var(--text); }
+.chip.is-on { background: var(--accent); border-color: var(--accent); color: var(--on-accent); }
+.chip-n {
+  font-family: var(--font-mono); font-size: .68rem;
+  opacity: .6;
+}
+.chip.is-on .chip-n { opacity: .8; }
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
+  gap: 1.25rem;
+  margin-top: 2.75rem;
+}
+
+.card {
+  position: relative;
+  display: flex; flex-direction: column;
+  padding: 1.6rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  transition: transform .35s var(--ease), box-shadow .35s var(--ease), border-color .35s var(--ease);
+}
+.card::after {
+  content: ""; position: absolute; inset: 0 auto auto 0;
+  height: 2px; width: 100%;
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
+  transform: scaleX(0); transform-origin: left;
+  transition: transform .45s var(--ease);
+}
+.card:hover {
+  transform: translateY(-4px);
+  border-color: color-mix(in srgb, var(--accent) 35%, var(--border));
+  box-shadow: var(--shadow-lift);
+}
+.card:hover::after { transform: scaleX(1); }
+
+/* filtered out */
+.card.is-hidden { display: none; }
+
+.card-top { display: flex; align-items: center; justify-content: space-between; gap: 1rem; margin-bottom: .9rem; }
+.card-index {
+  font-family: var(--font-mono);
+  font-size: .72rem; font-weight: 600;
+  color: var(--text-muted); opacity: .55;
+}
+.card h3 { font-size: 1.16rem; letter-spacing: -.02em; }
+.card-role { font-family: var(--font-mono); font-size: .73rem; color: var(--accent); margin: .3rem 0 .9rem; }
+.card-body { color: var(--text-2); font-size: .92rem; line-height: 1.68; flex: 1; margin-bottom: 0; }
+
+.badge {
+  flex-shrink: 0;
+  display: inline-flex; align-items: center; gap: .38rem;
+  font-family: var(--font-mono);
+  font-size: .64rem; font-weight: 500;
+  letter-spacing: .08em; text-transform: uppercase;
+  padding: .28rem .6rem; border-radius: 999px;
+  background: var(--bg-alt);
+  border: 1px solid var(--border-soft);
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+.badge-live {
+  background: var(--accent-soft);
+  border-color: color-mix(in srgb, var(--accent) 25%, transparent);
+  color: var(--accent);
+}
+.badge-dot {
+  width: 5px; height: 5px; border-radius: 50%;
+  background: currentColor;
+  animation: pulse 2.4s ease-in-out infinite;
+}
+
+.tags { display: flex; flex-wrap: wrap; gap: .33rem; margin-top: 1.15rem; }
+.tags li {
+  font-family: var(--font-mono); font-size: .7rem;
+  padding: .22rem .5rem; border-radius: 5px;
+  background: var(--bg-alt); color: var(--text-muted);
+  transition: color .2s var(--ease);
+}
+.card:hover .tags li { color: var(--text-2); }
+
+.card-foot {
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 1rem; margin-top: 1.25rem;
+  padding-top: 1.1rem;
+  border-top: 1px solid var(--border-soft);
+}
+.link-btn {
+  border: 0; background: none; padding: 0; cursor: pointer;
+  font-family: var(--font-mono); font-size: .78rem; font-weight: 500;
+  color: var(--text-2);
+  border-bottom: 1px dashed var(--border);
+  transition: color .2s var(--ease), border-color .2s var(--ease);
+}
+.link-btn:hover { color: var(--accent); border-color: var(--accent); }
+.card-link {
+  display: inline-flex; align-items: center; gap: .3rem;
+  font-family: var(--font-mono); font-size: .78rem; font-weight: 500;
+}
+.card-link:hover { text-decoration: underline; text-underline-offset: 4px; }
+
+.empty-state {
+  margin-top: 3rem; text-align: center;
+  color: var(--text-muted); font-size: .95rem;
+}

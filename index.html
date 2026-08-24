@@ -1,0 +1,943 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Shaiden Pillay — Full-Stack Developer</title>
+<meta name="description" content="Shaiden Trevino Pillay — Full-Stack Developer in Durban, South Africa. Six production systems across payroll, biometrics, ticketing and fleet logistics.">
+<meta name="author" content="Shaiden Trevino Pillay">
+<meta name="theme-color" content="#f7f7f5" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0b0d0d" media="(prefers-color-scheme: dark)">
+
+<!-- TODO: swap this domain if you move to a custom one (also in robots.txt + sitemap.xml) -->
+<link rel="canonical" href="https://shaiden15.github.io/MyPortfolio/">
+
+<meta property="og:type" content="profile">
+<meta property="og:url" content="https://shaiden15.github.io/MyPortfolio/">
+<meta property="og:title" content="Shaiden Pillay — Full-Stack Developer">
+<meta property="og:description" content="Six production systems across payroll, biometrics, ticketing and fleet logistics. React, Node, PostgreSQL, Flutter.">
+<meta property="og:image" content="https://shaiden15.github.io/MyPortfolio/assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Shaiden Pillay — Full-Stack Developer, Durban, South Africa">
+<meta property="og:locale" content="en_ZA">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Shaiden Pillay — Full-Stack Developer">
+<meta name="twitter:description" content="Six production systems across payroll, biometrics, ticketing and fleet logistics.">
+<meta name="twitter:image" content="https://shaiden15.github.io/MyPortfolio/assets/og-image.png">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Shaiden Trevino Pillay",
+  "givenName": "Shaiden",
+  "familyName": "Pillay",
+  "jobTitle": "Full-Stack Developer",
+  "email": "mailto:shaidenpillay15@gmail.com",
+  "telephone": "+27628776524",
+  "url": "https://shaiden15.github.io/MyPortfolio/",
+  "image": "https://shaiden15.github.io/MyPortfolio/assets/og-image.png",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Durban",
+    "addressRegion": "KwaZulu-Natal",
+    "addressCountry": "ZA"
+  },
+  "sameAs": [
+    "https://github.com/Shaiden15",
+    "https://www.linkedin.com/in/shaidentrevinopillay15"
+  ],
+  "alumniOf": {
+    "@type": "CollegeOrUniversity",
+    "name": "Durban University of Technology"
+  },
+  "knowsAbout": [
+    "React", "TypeScript", "Node.js", "PostgreSQL", "Prisma ORM",
+    "Flutter", "Dart", "Firebase", "WebSockets", "AWS", "Python"
+  ],
+  "hasCredential": [
+    { "@type": "EducationalOccupationalCredential", "name": "AWS Certified Developer – Associate", "credentialCategory": "certification" },
+    { "@type": "EducationalOccupationalCredential", "name": "AWS Lambda Functions, Amazon Web Services", "credentialCategory": "certification" },
+    { "@type": "EducationalOccupationalCredential", "name": "Get Connected, Cisco Networking Academy", "credentialCategory": "certification" },
+    { "@type": "EducationalOccupationalCredential", "name": "NDG Linux Unhatched, Cisco Networking Academy", "credentialCategory": "certification" }
+  ]
+}
+</script>
+
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%230f766e'/><text y='72' x='50' text-anchor='middle' font-size='58' font-family='monospace' font-weight='bold' fill='white'>S</text></svg>">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<!-- reading progress -->
+<div class="progress" aria-hidden="true"><span id="progress-bar"></span></div>
+
+<!-- ══ Header ══════════════════════════════════════════ -->
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="#top">
+      <span class="brand-mark" aria-hidden="true">SP</span>
+      <span class="brand-text">Shaiden Pillay</span>
+    </a>
+
+    <nav class="nav" aria-label="Primary">
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#projects">Work</a>
+      <a href="#skills">Skills</a>
+      <a href="#education">Education</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="header-actions">
+      <button class="cmdk-trigger" id="cmdk-open" type="button" aria-label="Open command palette">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+        <span class="cmdk-hint">Search</span>
+        <kbd>Ctrl K</kbd>
+      </button>
+
+      <button class="icon-btn" id="theme-toggle" type="button" aria-label="Toggle colour theme">
+        <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2v2.6M12 19.4V22M2 12h2.6M19.4 12H22M4.9 4.9l1.9 1.9M17.2 17.2l1.9 1.9M19.1 4.9l-1.9 1.9M6.8 17.2l-1.9 1.9"/></svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8.2 8.2 0 019.5 4 8.3 8.3 0 1020 14.5z"/></svg>
+      </button>
+
+      <button class="icon-btn menu-btn" id="menu-open" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ══ Mobile menu ═════════════════════════════════════ -->
+<div class="drawer" id="mobile-menu" hidden>
+  <div class="drawer-panel">
+    <div class="drawer-head">
+      <span class="panel-label">Navigate</span>
+      <button class="icon-btn" id="menu-close" type="button" aria-label="Close menu">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+    </div>
+    <nav class="drawer-nav" aria-label="Mobile">
+      <a href="#about"><span>01</span>About</a>
+      <a href="#experience"><span>02</span>Experience</a>
+      <a href="#projects"><span>03</span>Work</a>
+      <a href="#skills"><span>04</span>Skills</a>
+      <a href="#education"><span>05</span>Education</a>
+      <a href="#contact"><span>06</span>Contact</a>
+    </nav>
+    <a class="btn btn-primary drawer-cta" href="mailto:shaidenpillay15@gmail.com">Get in touch</a>
+  </div>
+</div>
+
+<main id="main">
+
+  <!-- ══ Hero ══════════════════════════════════════════ -->
+  <section class="hero" id="top">
+    <div class="hero-bg" aria-hidden="true">
+      <div class="hero-grid"></div>
+      <div class="orb orb-a"></div>
+      <div class="orb orb-b"></div>
+    </div>
+
+    <div class="wrap hero-inner">
+      <div class="hero-main">
+        <p class="pill"><span class="pill-dot" aria-hidden="true"></span>Open to opportunities</p>
+
+        <h1>
+          <span class="h1-line">Shaiden</span>
+          <span class="h1-line h1-accent">Pillay</span>
+        </h1>
+
+        <p class="hero-role">
+          <span class="role-static">Full-Stack Developer</span>
+          <span class="sep" aria-hidden="true">/</span>
+          <span class="role-rotate" aria-hidden="true">
+            <span class="rotate-track">
+              <span>React &amp; TypeScript</span>
+              <span>Node &amp; PostgreSQL</span>
+              <span>Flutter &amp; Firebase</span>
+              <span>Real-time systems</span>
+            </span>
+          </span>
+        </p>
+
+        <p class="hero-blurb">
+          I build secure, role-based, real-time business systems , payroll, biometric attendance,
+          ticketing, fleet logistics and mobile analytics.
+          <strong>Which are in active use right now.</strong>
+        </p>
+
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#projects">View the work<span class="btn-arrow" aria-hidden="true">→</span></a>
+          <button class="btn" type="button" data-copy="shaidenpillay15@gmail.com">
+            <svg class="btn-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="9" y="9" width="11" height="11" rx="2.5"/><path d="M5 15V6.5A2.5 2.5 0 017.5 4H15"/></svg>
+            Copy email
+          </button>
+          <!-- TODO: drop your PDF in /assets and uncomment -->
+          <!-- <a class="btn" href="assets/Shaiden_Pillay_CV.pdf" download>Download CV</a> -->
+        </div>
+      </div>
+
+      <aside class="hero-panel" aria-label="Status">
+        <div class="panel-top">
+          <span class="panel-label">Live systems</span>
+          <span class="panel-clock" id="clock" title="Local time in Durban">—</span>
+        </div>
+
+        <ul class="panel-list">
+          <li>
+            <span class="dot" aria-hidden="true"></span>
+            <a href="https://payitsmart.co.za" target="_blank" rel="noopener">payitsmart.co.za</a>
+            <span class="panel-tag">Payroll</span>
+          </li>
+          <li>
+            <span class="dot" aria-hidden="true"></span>
+            <a href="https://biometrics24-7.co.za" target="_blank" rel="noopener">biometrics24-7.co.za</a>
+            <span class="panel-tag">Attendance</span>
+          </li>
+          <li>
+            <span class="dot" aria-hidden="true"></span>
+            <a href="https://buzztickets.co.za" target="_blank" rel="noopener">buzztickets.co.za</a>
+            <span class="panel-tag">Ticketing</span>
+          </li>
+        </ul>
+
+        <span class="panel-label panel-label-tight">Core stack</span>
+        <ul class="panel-stack">
+          <li>React 19</li><li>TypeScript</li><li>Node.js</li>
+          <li>PostgreSQL</li><li>Prisma</li><li>Flutter</li>
+        </ul>
+      </aside>
+    </div>
+
+    <div class="wrap">
+      <ul class="hero-stats">
+        <li><strong data-count="6">0</strong><span>systems in active use</span></li>
+        <li><strong data-count="7">0</strong><span>companies served</span></li>
+        <li><strong data-count="21">0</strong><span>employees on payroll</span></li>
+        <li><strong data-count="4">0</strong><span>certifications</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ══ About ═════════════════════════════════════════ -->
+  <section class="section" id="about">
+    <div class="wrap">
+      <div class="grid-2">
+        <div class="section-head">
+          <p class="eyebrow">01 — About</p>
+          <h2>Systems that people actually depend on</h2>
+        </div>
+        <div class="prose">
+          <p>
+            I've independently led and contributed to six production systems currently in active
+            use, spanning payroll, biometric attendance, event ticketing, fleet management and
+            mobile sales analytics , alongside internal platforms for Durban University of
+            Technology and client-facing mobile applications.
+          </p>
+          <p>
+            I'm comfortable across React 19, Flutter, Node.js, PostgreSQL, Firebase, Prisma ORM,
+            AWS and WebSockets. I care most about the unglamorous parts: correct data models,
+            enforced permissions, and real-time state that doesn't drift.
+          </p>
+          <p>
+            I hold a Bachelor of Information and Communications Technology from Durban
+            University of Technology.
+          </p>
+        </div>
+      </div>
+
+      <ul class="values">
+        <li>
+          <span class="value-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M12 3l7.5 3.4v5.1c0 4.4-3.1 8.2-7.5 9.5-4.4-1.3-7.5-5.1-7.5-9.5V6.4z"/><path d="M9.2 12.2l2 2 3.6-3.9"/></svg>
+          </span>
+          <h3>Security first</h3>
+          <p>Role-based access enforced server-side, not just hidden in the UI. JWT, Passport, row-level security.</p>
+        </li>
+        <li>
+          <span class="value-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M13 2L4.5 13.5H11l-1 8.5 9-11.8h-6.4z"/></svg>
+          </span>
+          <h3>Real-time by default</h3>
+          <p>WebSocket-driven state that stays in sync across modules , and cache keys that don't go stale.</p>
+        </li>
+        <li>
+          <span class="value-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M9 18l-5-6 5-6M15 6l5 6-5 6"/></svg>
+          </span>
+          <h3>Tested and reviewed</h3>
+          <p>Jest, Vitest and React Testing Library across the stack, plus reviewing team members' code as lead developer.</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ══ Experience ════════════════════════════════════ -->
+  <section class="section section-alt" id="experience">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">02 — Experience</p>
+        <h2>Where I've been building</h2>
+      </div>
+
+      <ol class="timeline">
+        <li class="tl-item">
+          <div class="tl-marker" aria-hidden="true"></div>
+          <div class="tl-body">
+            <p class="tl-date">Jun 2025 — Present</p>
+            <h3>Junior Full-Stack Developer</h3>
+            <p class="tl-org">Durban University of Technology · Internal &amp; External Systems</p>
+            <p class="tl-text">
+              Architected and developed enterprise internal business systems and client-facing mobile
+              applications across payroll, biometric attendance, pharmacy operations, event ticketing
+              and mobile sales analytics , using React 19, Flutter, Node.js, PostgreSQL, Firebase,
+              Prisma ORM, WebSockets and AWS.
+            </p>
+            <ul class="tl-tags">
+              <li>6 platforms delivered</li><li>Lead developer on 2</li><li>Code review</li>
+            </ul>
+          </div>
+        </li>
+
+        <li class="tl-item">
+          <div class="tl-marker" aria-hidden="true"></div>
+          <div class="tl-body">
+            <p class="tl-date">2023 — 2026</p>
+            <h3>BSc Information &amp; Communications Technology</h3>
+            <p class="tl-org">Durban University of Technology</p>
+            <p class="tl-text">
+              Studied alongside full-time development work on production systems.
+            </p>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ══ Projects ══════════════════════════════════════ -->
+  <section class="section" id="projects">
+    <div class="wrap">
+      <div class="projects-head">
+        <div class="section-head">
+          <p class="eyebrow">03 — Selected work</p>
+          <h2>Things I've built</h2>
+        </div>
+
+        <div class="filters" role="group" aria-label="Filter projects">
+          <button class="chip is-on" type="button" data-filter="all">All <span class="chip-n">12</span></button>
+          <button class="chip" type="button" data-filter="production">In production <span class="chip-n">4</span></button>
+          <button class="chip" type="button" data-filter="mobile">Mobile <span class="chip-n">2</span></button>
+          <button class="chip" type="button" data-filter="ai">AI <span class="chip-n">3</span></button>
+          <button class="chip" type="button" data-filter="personal">Personal <span class="chip-n">6</span></button>
+        </div>
+      </div>
+
+      <div class="cards" id="project-grid">
+
+        <!-- PayITSmart -->
+        <article class="card" data-cat="production work" data-title="PayITSmart">
+          <div class="card-media" data-initials="P">
+            <img src="assets/shots/payitsmart.png" alt="PayITSmart screenshot" loading="lazy" decoding="async" width="640" height="400">
+          </div>
+          <div class="card-top">
+            <span class="card-index" aria-hidden="true">01</span>
+            <span class="badge badge-live"><span class="badge-dot" aria-hidden="true"></span>In production</span>
+          </div>
+          <h3>PayITSmart</h3>
+          <p class="card-role">Lead Full-Stack Developer</p>
+          <p class="card-body">
+            Enterprise payroll and employee management platform running live for 21 employees on
+            an hourly/monthly pay cycle — onboarding, payroll processing and deductions, and
+            workforce operations.
+          </p>
+          <ul class="tags"><li>React 19</li><li>Node.js</li><li>PostgreSQL</li><li>Prisma</li><li>WebSockets</li></ul>
+          <div class="card-foot">
+            <button class="link-btn" type="button" data-open-detail>What I built</button>
+            <a class="card-link" href="https://payitsmart.co.za" target="_blank" rel="noopener">Visit<span aria-hidden="true">↗</span></a>
+          </div>
+          <template class="card-detail">
+            <ul class="detail-list">
+              <li>Led full-stack development of an enterprise payroll and employee management platform, in production for 21 employees on an hourly/monthly pay cycle — covering onboarding, payroll processing and deductions, and workforce operations.</li>
+              <li>Integrated live biometric attendance data from Biometrics24-7 to automatically calculate hours worked and pay for hourly staff, alongside inventory/reservation data and KPI dashboards for operational reporting.</li>
+              <li>Designed the PostgreSQL schema and Prisma ORM data layer, and implemented WebSocket-based real-time updates across the platform.</li>
+              <li>Reviewed team members' code across the platform, supporting code quality and consistency as lead developer.</li>
+            </ul>
+          </template>
+        </article>
+
+        <!-- Biometrics24-7 -->
+        <article class="card" data-cat="production work" data-title="Biometrics24-7">
+          <div class="card-media" data-initials="B7">
+            <img src="assets/shots/biometrics24-7.png" alt="Biometrics24-7 screenshot" loading="lazy" decoding="async" width="640" height="400">
+          </div>
+          <div class="card-top">
+            <span class="card-index" aria-hidden="true">02</span>
+            <span class="badge badge-live"><span class="badge-dot" aria-hidden="true"></span>In production</span>
+          </div>
+          <h3>Biometrics24-7</h3>
+          <p class="card-role">Sole Full-Stack Developer</p>
+          <p class="card-body">
+            Real-time biometric attendance platform built end-to-end, integrating fingerprint scanner
+            hardware over IoT. Deployed across 7 companies.
+          </p>
+          <ul class="tags"><li>React 19</li><li>Node.js</li><li>PostgreSQL</li><li>WebSockets</li><li>IoT</li></ul>
+          <div class="card-foot">
+            <button class="link-btn" type="button" data-open-detail>What I built</button>
+            <a class="card-link" href="https://biometrics24-7.co.za" target="_blank" rel="noopener">Visit<span aria-hidden="true">↗</span></a>
+          </div>
+          <template class="card-detail">
+            <ul class="detail-list">
+              <li>Built a real-time biometric attendance platform end-to-end, integrating fingerprint scanner hardware via IoT device communication.</li>
+              <li>Implemented WebSocket-powered live attendance monitoring, plus analytics and reporting dashboards.</li>
+              <li>Developed secure authentication workflows for staff enrollment and attendance verification.</li>
+              <li>Architected a dual-mode deployment model: the system runs as a fully standalone app, or as a plugin that integrates directly with PayITSmart — feeding live biometric attendance into payroll to automatically determine payslips.</li>
+              <li>In production across 7 companies, with each scanner supporting up to 127 enrolled fingerprints on-device.</li>
+            </ul>
+          </template>
+        </article>
+
+        <!-- BuzzTicket -->
+        <article class="card" data-cat="production work" data-title="BuzzTicket">
+          <div class="card-media" data-initials="B">
+            <img src="assets/shots/buzzticket.png" alt="BuzzTicket screenshot" loading="lazy" decoding="async" width="640" height="400">
+          </div>
+          <div class="card-top">
+            <span class="card-index" aria-hidden="true">03</span>
+            <span class="badge badge-live"><span class="badge-dot" aria-hidden="true"></span>In production</span>
+          </div>
+          <h3>BuzzTicket</h3>
+          <p class="card-role">Lead &amp; Sole Full-Stack Developer</p>
+          <p class="card-body">
+            Event booking and ticketing platform with QR-based ticket generation and validation, and
+            automatic revenue splitting between organiser and admin at the point of payment.
+          </p>
+          <ul class="tags"><li>React 19</li><li>Node.js</li><li>PostgreSQL</li><li>AWS S3</li><li>Paystack</li></ul>
+          <div class="card-foot">
+            <button class="link-btn" type="button" data-open-detail>What I built</button>
+            <a class="card-link" href="https://buzztickets.co.za" target="_blank" rel="noopener">Visit<span aria-hidden="true">↗</span></a>
+          </div>
+          <template class="card-detail">
+            <ul class="detail-list">
+              <li>Independently architected and delivered an event booking and ticketing platform, including QR-based ticket generation and validation.</li>
+              <li>Integrated Paystack as the payment gateway, creating Paystack subaccounts for event organisers so ticket revenue is automatically split between organiser and system admin at the point of payment.</li>
+              <li>Built event analytics dashboards and integrated AWS S3 for secure media and file storage.</li>
+              <li>Implemented secure authentication and reporting across the platform.</li>
+            </ul>
+          </template>
+        </article>
+
+        <!-- WhizzFleet -->
+        <article class="card" data-cat="production work" data-title="WhizzFleet">
+          <div class="card-media" data-initials="W">
+            <img src="assets/shots/whizzfleet.png" alt="WhizzFleet screenshot" loading="lazy" decoding="async" width="640" height="400">
+          </div>
+          <div class="card-top">
+            <span class="card-index" aria-hidden="true">04</span>
+            <span class="badge badge-live"><span class="badge-dot" aria-hidden="true"></span>In production</span>
+          </div>
+          <h3>WhizzFleet</h3>
+          <p class="card-role">Full-Stack Developer</p>
+          <p class="card-body">
+            Fleet and logistics platform in production, managing trucks across the Assign and Truck
+            Management modules , full load-lifecycle tracking, driver reassignment with conflict
+            detection, and cross-module real-time alerts.
+          </p>
+          <ul class="tags"><li>React</li><li>TypeScript</li><li>TanStack Query</li><li>Express</li><li>Prisma</li><li>Vitest</li></ul>
+          <div class="card-foot">
+            <button class="link-btn" type="button" data-open-detail>What I built</button>
+          </div>
+          <template class="card-detail">
+            <ul class="detail-list">
+              <li>In production managing trucks across the Assign and Truck Management modules.</li>
+              <li>Built the Assign module's full load-lifecycle tracking (Create → In Progress → POD &amp; Complete) with real-time timestamp capture, an editable-timestamp correction flow, and cross-field ordering validation.</li>
+              <li>Designed a custom DateTimePicker component and a driver/fleet reassignment workflow that flags conflicts from truck faults or driver leave, with role-based UI gating (Director vs. Controller) enforced server-side.</li>
+              <li>Built the Truck Management module, including a server-side registration-expiry alerting system and a fault logging/resolution workflow with severity tracking and fleet-pull integration.</li>
+              <li>Implemented a cross-module real-time alert system (sidebar bell badges) kept in sync via React Query cache invalidation across independently owned modules; diagnosed and fixed a cache-key mismatch causing stale counts.</li>
+            </ul>
+          </template>
+        </article>
+
+        <!-- AwehPay -->
+        <article class="card" data-cat="mobile work" data-title="AwehPay">
+          <div class="card-media" data-initials="A">
+            <img src="assets/shots/awehpay.png" alt="AwehPay screenshot" loading="lazy" decoding="async" width="640" height="400">
+          </div>
+          <div class="card-top">
+            <span class="card-index" aria-hidden="true">05</span>
+            <span class="badge">Google Play</span>
+          </div>
+          <h3>AwehPay</h3>
+          <p class="card-role">Full-Stack Feature Developer</p>
+          <p class="card-body">
+            Sales tracking and business analytics for a Flutter mobile POS app — real-time sale
+            recording, daily dashboards and automated business insights.
+          </p>
+          <ul class="tags"><li>Flutter</li><li>Dart</li><li>Riverpod</li><li>Firebase</li><li>Node.js</li></ul>
+          <div class="card-foot">
+            <button class="link-btn" type="button" data-open-detail>What I built</button>
+          </div>
+          <template class="card-detail">
+            <ul class="detail-list">
+              <li>Built end-to-end sales tracking and analytics for a Flutter mobile POS app, covering real-time sale recording, daily dashboards, and automated business insights.</li>
+              <li>Designed transactional sale-recording logic using Firestore atomic counters (<code>FieldValue.increment()</code>) to maintain consistent running totals under concurrent writes.</li>
+              <li>Implemented a best-seller/slowest-seller ranking algorithm aggregating quantity sold per product across transaction line items, cross-referenced with live stock data.</li>
+              <li>Built a business insights screen with a net profit card, a custom 7-day income/expense bar chart (no external charting library), product performance cards, and a cash flow indicator.</li>
+              <li>App published and live on the Google Play Store.</li>
+            </ul>
+          </template>
+        </article>
+
+        <!-- MediIntel -->
+        <article class="card" data-cat="work" data-title="MediIntel">
+          <div class="card-media" data-initials="M">
+            <img src="assets/shots/mediintel.png" alt="MediIntel screenshot" loading="lazy" decoding="async" width="640" height="400">
+          </div>
+          <div class="card-top">
+            <span class="card-index" aria-hidden="true">06</span>
+            <span class="badge">Team project</span>
+          </div>
+          <h3>MediIntel</h3>
+          <p class="card-role">Full-Stack Developer</p>
+          <p class="card-body">
+            Pharmacy operations platform covering stock receiving, multi-branch transfers and
+            returns/expiry tracking, with audit logging for compliance.
+          </p>
+          <ul class="tags"><li>React 19</li><li>Node.js</li><li>PostgreSQL</li><li>Prisma</li></ul>
+          <div class="card-foot">
+            <button class="link-btn" type="button" data-open-detail>What I built</button>
+          </div>
+          <template class="card-detail">
+            <ul class="detail-list">
+              <li>Contributed to frontend and backend development of a pharmacy operations platform covering stock receiving, multi-branch transfers, and returns/expiry tracking.</li>
+              <li>Built prescription processing workflows and audit logging for operational reporting and compliance.</li>
+            </ul>
+          </template>
+        </article>
+
+        <!-- GovGuide SA -->
+        <article class="card" data-cat="personal ai" data-title="GovGuide SA">
+          <div class="card-media" data-initials="GS">
+            <img src="assets/shots/govguide-sa.png" alt="GovGuide SA screenshot" loading="lazy" decoding="async" width="640" height="400">
+          </div>
+          <div class="card-top">
+            <span class="card-index" aria-hidden="true">07</span>
+            <span class="badge">Personal</span>
+          </div>
+          <h3>GovGuide SA</h3>
+          <p class="card-role">AI-powered government services platform</p>
+          <p class="card-body">
+            Helps South African citizens navigate government processes, starting with NSFAS.
+            Full-text search answers most queries without an AI call.
+          </p>
+          <ul class="tags"><li>React 19</li><li>Express</li><li>Supabase</li><li>Gemini</li></ul>
+          <div class="card-foot">
+            <button class="link-btn" type="button" data-open-detail>What I built</button>
+            <a class="card-link" href="https://lnkd.in/p/dEdmA_zk" target="_blank" rel="noopener" data-cta="Watch the demo">View demo<span aria-hidden="true">↗</span></a>
+          </div>
+          <template class="card-detail">
+            <ul class="detail-list">
+              <li>Built a platform helping South African citizens navigate government processes, starting with NSFAS — consolidating official eligibility rules and document checklists sourced directly from government policy documents, with PostgreSQL full-text search handling most queries without an AI call.</li>
+              <li>Built an AI-powered document checker and rejection-letter analyser using Google Gemini vision, reserving AI for the one feature that genuinely needs it.</li>
+              <li>Implemented Supabase Auth with row-level security to keep uploaded documents scoped privately to each user.</li>
+            </ul>
+          </template>
+        </article>
+
+        <!-- AI Learning Adventure -->
+        <article class="card" data-cat="personal ai" data-title="AI Learning Adventure">
+          <div class="card-media" data-initials="AL">
+            <img src="assets/shots/ai-learning-adventure.png" alt="AI Learning Adventure screenshot" loading="lazy" decoding="async" width="640" height="400">
+          </div>
+          <div class="card-top">
+            <span class="card-index" aria-hidden="true">08</span>
+            <span class="badge">TopCoder</span>
+          </div>
+          <h3>AI Learning Adventure</h3>
+          <p class="card-role">AI literacy learning game</p>
+          <p class="card-body">
+            A 10-mission AI-literacy platform with 56 quiz questions, 30 flashcards, XP/badge
+            progression and a full admin CMS.
+          </p>
+          <ul class="tags"><li>React</li><li>TypeScript</li><li>Zustand</li><li>Framer Motion</li></ul>
+          <div class="card-foot">
+            <button class="link-btn" type="button" data-open-detail>What I built</button>
+          </div>
+          <template class="card-detail">
+            <ul class="detail-list">
+              <li>Built a 10-mission AI-literacy learning platform (56 quiz questions, 30 flashcards, XP/badge progression) with a full admin CMS for mission, quiz and flashcard content management.</li>
+              <li>Built a provider-agnostic AI tutor supporting Groq, Gemini, Ollama and OpenAI, with a zero-config mock-mode fallback so the app stays fully functional and free to evaluate.</li>
+              <li>Covered core logic with a 76-test suite spanning AI routing, progress/content stores, and component rendering.</li>
+              <li>Built for the TopCoder Rapid Application Development Challenge.</li>
+            </ul>
+          </template>
+        </article>
+
+        <!-- NexusOS -->
+        <article class="card" data-cat="personal" data-title="NexusOS">
+          <div class="card-media" data-initials="N">
+            <img src="assets/shots/nexusos.png" alt="NexusOS screenshot" loading="lazy" decoding="async" width="640" height="400">
+          </div>
+          <div class="card-top">
+            <span class="card-index" aria-hidden="true">09</span>
+            <span class="badge">Personal</span>
+          </div>
+          <h3>NexusOS</h3>
+          <p class="card-role">Frontend system architecture</p>
+          <p class="card-body">
+            A scalable, feature-based frontend architecture for a modular enterprise dashboard —
+            centralized routing, lazy loading and reusable layout systems.
+          </p>
+          <ul class="tags"><li>React 19</li><li>TypeScript</li><li>Zustand</li><li>Vite</li></ul>
+          <div class="card-foot">
+            <button class="link-btn" type="button" data-open-detail>What I built</button>
+            <a class="card-link" href="https://lnkd.in/p/dsE2ES9x" target="_blank" rel="noopener" data-cta="Watch the demo">View demo<span aria-hidden="true">↗</span></a>
+          </div>
+        </article>
+
+        <!-- Facial Recognition -->
+        <article class="card" data-cat="personal ai" data-title="Facial Recognition Attendance">
+          <div class="card-media" data-initials="FR">
+            <img src="assets/shots/facial-recognition-attendance.png" alt="Facial Recognition Attendance screenshot" loading="lazy" decoding="async" width="640" height="400">
+          </div>
+          <div class="card-top">
+            <span class="card-index" aria-hidden="true">10</span>
+            <span class="badge">Personal</span>
+          </div>
+          <h3>Facial Recognition Attendance</h3>
+          <p class="card-role">Computer vision system</p>
+          <p class="card-body">
+            Role-based attendance system with real-time webcam processing, automated attendance
+            tracking and a Flask backend.
+          </p>
+          <ul class="tags"><li>Python</li><li>Flask</li><li>OpenCV</li></ul>
+          <div class="card-foot">
+            <button class="link-btn" type="button" data-open-detail>What I built</button>
+            <a class="card-link" href="https://lnkd.in/p/dtgqgP78" target="_blank" rel="noopener" data-cta="Watch the demo">View demo<span aria-hidden="true">↗</span></a>
+          </div>
+        </article>
+
+        <!-- SVG Converter -->
+        <article class="card" data-cat="personal" data-title="SVG Converter">
+          <div class="card-media" data-initials="SC">
+            <img src="assets/shots/svg-converter.png" alt="SVG Converter screenshot" loading="lazy" decoding="async" width="640" height="400">
+          </div>
+          <div class="card-top">
+            <span class="card-index" aria-hidden="true">11</span>
+            <span class="badge">Personal</span>
+          </div>
+          <h3>SVG Converter</h3>
+          <p class="card-role">Image conversion platform</p>
+          <p class="card-body">
+            Full-stack JPG/PNG-to-SVG conversion tool with drag-and-drop uploads, custom image
+            parsing and SVG generation, and a validated REST API.
+          </p>
+          <ul class="tags"><li>React 19</li><li>Express</li><li>Tailwind</li></ul>
+          <div class="card-foot">
+            <button class="link-btn" type="button" data-open-detail>What I built</button>
+          </div>
+        </article>
+
+        <!-- Tutoring -->
+        <article class="card" data-cat="personal mobile" data-title="Peer-to-Peer Tutoring">
+          <div class="card-media" data-initials="PT">
+            <img src="assets/shots/peer-to-peer-tutoring.png" alt="Peer-to-Peer Tutoring screenshot" loading="lazy" decoding="async" width="640" height="400">
+          </div>
+          <div class="card-top">
+            <span class="card-index" aria-hidden="true">12</span>
+            <span class="badge">Personal</span>
+          </div>
+          <h3>Peer-to-Peer Tutoring</h3>
+          <p class="card-role">Android mobile platform</p>
+          <p class="card-body">
+            Tutoring platform with session scheduling and QR-based attendance tracking, built on
+            MVVM with authentication and admin workflows.
+          </p>
+          <ul class="tags"><li>Android</li><li>Java</li><li>MVVM</li></ul>
+          <div class="card-foot">
+            <button class="link-btn" type="button" data-open-detail>What I built</button>
+            <a class="card-link" href="https://lnkd.in/p/dCEgF3uV" target="_blank" rel="noopener" data-cta="Watch the demo">View demo<span aria-hidden="true">↗</span></a>
+          </div>
+        </article>
+
+      </div>
+
+      <p class="empty-state" id="empty-state" hidden>No projects in that category.</p>
+
+
+    </div>
+  </section>
+
+  <!-- ══ Skills ════════════════════════════════════════ -->
+  <section class="section section-alt" id="skills">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">04 — Skills</p>
+        <h2>Toolkit</h2>
+      </div>
+
+      <div class="skill-grid">
+        <article class="skill-card">
+          <h3><span class="skill-num" aria-hidden="true">01</span>Languages</h3>
+          <ul class="tags"><li>JavaScript</li><li>TypeScript</li><li>Dart</li><li>Python</li><li>Java</li></ul>
+        </article>
+
+        <article class="skill-card">
+          <h3><span class="skill-num" aria-hidden="true">02</span>Frontend &amp; Mobile</h3>
+          <ul class="tags"><li>React 18/19</li><li>Flutter</li><li>Riverpod</li><li>GoRouter</li><li>Android / MVVM</li><li>Vite</li><li>Zustand</li><li>TanStack Query</li><li>Tailwind</li><li>MUI</li><li>Framer Motion</li><li>Recharts</li></ul>
+        </article>
+
+        <article class="skill-card">
+          <h3><span class="skill-num" aria-hidden="true">03</span>Backend</h3>
+          <ul class="tags"><li>Node.js</li><li>Express</li><li>Flask</li><li>REST APIs</li><li>Socket.io</li><li>JWT</li><li>Passport.js</li><li>RBAC</li><li>IoT integration</li></ul>
+        </article>
+
+        <article class="skill-card">
+          <h3><span class="skill-num" aria-hidden="true">04</span>Data</h3>
+          <ul class="tags"><li>PostgreSQL</li><li>Prisma ORM</li><li>Supabase</li><li>Firestore</li><li>MySQL</li><li>SQLite</li><li>Schema design</li><li>Query optimization</li><li>Full-text search</li></ul>
+        </article>
+
+        <article class="skill-card">
+          <h3><span class="skill-num" aria-hidden="true">05</span>Cloud &amp; DevOps</h3>
+          <ul class="tags"><li>AWS S3</li><li>Elastic Beanstalk</li><li>Firebase Auth</li><li>Supabase Auth</li><li>Vercel</li><li>Render</li><li>Docker</li><li>CI/CD</li></ul>
+        </article>
+
+        <article class="skill-card">
+          <h3><span class="skill-num" aria-hidden="true">06</span>Testing &amp; Practice</h3>
+          <ul class="tags"><li>Jest</li><li>Vitest</li><li>React Testing Library</li><li>Git / GitHub</li><li>Postman</li><li>Agile</li></ul>
+        </article>
+
+        <article class="skill-card">
+          <h3><span class="skill-num" aria-hidden="true">07</span>AI &amp; Integrations</h3>
+          <ul class="tags"><li>Google Gemini</li><li>OpenCV</li><li>Groq</li><li>OpenAI</li><li>Ollama</li><li>Paystack</li></ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ Education ═════════════════════════════════════ -->
+  <section class="section" id="education">
+    <div class="wrap grid-2">
+      <div class="section-head">
+        <p class="eyebrow">05 — Education</p>
+        <h2>Background &amp; certifications</h2>
+      </div>
+
+      <div>
+        <article class="edu">
+          <h3>BSc Information and Communications Technology</h3>
+          <p class="edu-org">Durban University of Technology</p>
+          <p class="edu-date">2023 — 2026</p>
+        </article>
+        <article class="edu">
+          <h3>National Senior Certificate — Bachelor's Pass</h3>
+          <p class="edu-org">Kharwastan Secondary School</p>
+          <p class="edu-date">2018 — 2022</p>
+        </article>
+
+        <h3 class="subhead subhead-tight">Certifications</h3>
+        <ul class="certs">
+          <li>
+            <span class="cert-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><circle cx="12" cy="9" r="5"/><path d="M8.5 13.5L7 22l5-2.6L17 22l-1.5-8.5"/></svg>
+            </span>
+            <span class="cert-name">AWS Certified Developer — Associate</span>
+            <span class="cert-year">2025</span>
+          </li>
+          <li>
+            <span class="cert-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><circle cx="12" cy="9" r="5"/><path d="M8.5 13.5L7 22l5-2.6L17 22l-1.5-8.5"/></svg>
+            </span>
+            <span class="cert-name">AWS Lambda Functions, Amazon Web Services</span>
+            <span class="cert-year">2025</span>
+          </li>
+          <li>
+            <span class="cert-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><circle cx="12" cy="9" r="5"/><path d="M8.5 13.5L7 22l5-2.6L17 22l-1.5-8.5"/></svg>
+            </span>
+            <span class="cert-name">Get Connected, Cisco Networking Academy</span>
+            <span class="cert-year">2024</span>
+          </li>
+          <li>
+            <span class="cert-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><circle cx="12" cy="9" r="5"/><path d="M8.5 13.5L7 22l5-2.6L17 22l-1.5-8.5"/></svg>
+            </span>
+            <span class="cert-name">NDG Linux Unhatched, Cisco Networking Academy</span>
+            <span class="cert-year">2024</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ Contact ═══════════════════════════════════════ -->
+  <section class="section section-contact" id="contact">
+    <div class="contact-glow" aria-hidden="true"></div>
+    <div class="wrap">
+      <p class="eyebrow">06 — Contact</p>
+      <h2>Let's build something</h2>
+      <p class="contact-blurb">
+        Open to full-stack roles and freelance work. Send a message below, or email me directly.
+      </p>
+
+      <div class="contact-actions">
+        <a class="btn btn-primary btn-lg" href="mailto:shaidenpillay15@gmail.com">
+          shaidenpillay15@gmail.com<span class="btn-arrow" aria-hidden="true">→</span>
+        </a>
+        <button class="btn btn-lg" type="button" data-copy="shaidenpillay15@gmail.com">
+          <svg class="btn-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="9" y="9" width="11" height="11" rx="2.5"/><path d="M5 15V6.5A2.5 2.5 0 017.5 4H15"/></svg>
+          Copy
+        </button>
+      </div>
+
+      <!-- ── Contact form ──────────────────────────────────
+           Set up (2 minutes, free, no backend):
+             1. Sign up at https://formspree.io
+             2. Create a form, copy its endpoint ID
+             3. Replace YOUR_FORM_ID in the action below
+           Until you do that, the form falls back to opening the
+           visitor's mail client with the message pre-filled —
+           so it is never a dead end.
+      -->
+      <form class="contact-form" id="contact-form"
+            action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+        <div class="field">
+          <label for="cf-name">Name</label>
+          <input type="text" id="cf-name" name="name" required autocomplete="name" placeholder="Jane Dlamini">
+        </div>
+        <div class="field">
+          <label for="cf-email">Email</label>
+          <input type="email" id="cf-email" name="email" required autocomplete="email" placeholder="jane@company.co.za">
+        </div>
+        <div class="field field-wide">
+          <label for="cf-message">Message</label>
+          <textarea id="cf-message" name="message" rows="4" required placeholder="What are you building?"></textarea>
+        </div>
+
+        <!-- honeypot: bots fill this, humans never see it -->
+        <div class="hp" aria-hidden="true">
+          <label for="cf-company">Company (leave blank)</label>
+          <input type="text" id="cf-company" name="_gotcha" tabindex="-1" autocomplete="off">
+        </div>
+
+        <div class="form-foot">
+          <p class="form-note" id="form-note" role="status" aria-live="polite"></p>
+          <button class="btn btn-primary" type="submit" id="cf-submit">
+            Send message<span class="btn-arrow" aria-hidden="true">→</span>
+          </button>
+        </div>
+      </form>
+
+      <ul class="contact-list">
+        <li><span>Phone</span><a href="tel:+27628776524">+27 62 877 6524</a></li>
+        <!-- TODO: replace with your real profile URLs -->
+        <li><span>GitHub</span><a href="https://github.com/Shaiden15" target="_blank" rel="noopener">github.com/Shaiden15</a></li>
+        <li><span>LinkedIn</span><a href="https://www.linkedin.com/in/shaidentrevinopillay15" target="_blank" rel="noopener">linkedin.com/in/shaidentrevinopillay15</a></li>
+        <li><span>Location</span><span class="plain">Durban, South Africa</span></li>
+      </ul>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <p>© <span id="year">2026</span> Shaiden Pillay</p>
+  </div>
+</footer>
+
+<!-- ══ Back to top ═════════════════════════════════════ -->
+<button class="to-top" id="to-top" type="button" aria-label="Back to top">
+  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+</button>
+
+<!-- ══ Project detail dialog ═══════════════════════════ -->
+<dialog class="modal" id="detail-modal" aria-labelledby="detail-title">
+  <div class="modal-head">
+    <div>
+      <p class="modal-eyebrow" id="detail-role"></p>
+      <h2 id="detail-title"></h2>
+    </div>
+    <button class="icon-btn" id="detail-close" type="button" aria-label="Close">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+    </button>
+  </div>
+  <div class="modal-toolbar">
+    <div class="view-toggle" id="detail-view-toggle">
+      <button class="view-btn is-active" type="button" data-view="bullets">Overview</button>
+      <button class="view-btn" type="button" data-view="diagram">Architecture</button>
+      <button class="view-btn" type="button" data-view="tree">File structure</button>
+    </div>
+    <button class="dl-btn" id="detail-download" type="button" title="Download PDF">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v13M7 11l5 5 5-5M5 20h14"/></svg>
+      Download
+    </button>
+  </div>
+  <div class="modal-body" id="detail-body"></div>
+  <div class="modal-foot">
+    <ul class="tags" id="detail-tags"></ul>
+    <a class="btn btn-primary" id="detail-link" href="#" target="_blank" rel="noopener" hidden><span id="detail-link-label">Visit site</span><span class="btn-arrow" aria-hidden="true">→</span></a>
+  </div>
+</dialog>
+
+<!-- ══ Command palette ═════════════════════════════════ -->
+<dialog class="cmdk" id="cmdk" aria-label="Command palette">
+  <div class="cmdk-input-row">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+    <input type="text" id="cmdk-input" placeholder="Search sections, projects, links…" autocomplete="off" spellcheck="false" aria-label="Search">
+    <kbd>Esc</kbd>
+  </div>
+  <ul class="cmdk-results" id="cmdk-results" role="listbox" aria-label="Results"></ul>
+  <div class="cmdk-foot">
+    <span><kbd>↑</kbd><kbd>↓</kbd> navigate</span>
+    <span><kbd>↵</kbd> open</span>
+  </div>
+</dialog>
+
+<!-- ══ Screenshot lightbox ═════════════════════════════ -->
+<dialog class="lightbox" id="lightbox" aria-label="Screenshot">
+  <button class="icon-btn lightbox-close" id="lightbox-close" type="button" aria-label="Close">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+  </button>
+  <img id="lightbox-img" src="" alt="">
+  <p class="lightbox-cap" id="lightbox-cap"></p>
+</dialog>
+
+<!-- ══ Keyboard shortcuts ══════════════════════════════ -->
+<dialog class="modal shortcuts" id="shortcuts" aria-labelledby="sc-title">
+  <div class="modal-head">
+    <div>
+      <p class="modal-eyebrow">Keyboard</p>
+      <h2 id="sc-title">Shortcuts</h2>
+    </div>
+    <button class="icon-btn" id="shortcuts-close" type="button" aria-label="Close">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+    </button>
+  </div>
+  <div class="modal-body">
+    <dl class="sc-list">
+      <div><dt><kbd>Ctrl</kbd><kbd>K</kbd></dt><dd>Open the command palette</dd></div>
+      <div><dt><kbd>?</kbd></dt><dd>Show this panel</dd></div>
+      <div><dt><kbd>T</kbd></dt><dd>Toggle light / dark theme</dd></div>
+      <div><dt><kbd>G</kbd> <span class="sc-then">then</span> <kbd>W</kbd></dt><dd>Go to Work</dd></div>
+      <div><dt><kbd>G</kbd> <span class="sc-then">then</span> <kbd>C</kbd></dt><dd>Go to Contact</dd></div>
+      <div><dt><kbd>G</kbd> <span class="sc-then">then</span> <kbd>T</kbd></dt><dd>Go to top</dd></div>
+      <div><dt><kbd>Esc</kbd></dt><dd>Close any open panel</dd></div>
+    </dl>
+  </div>
+</dialog>
+
+<!-- ══ Toast ═══════════════════════════════════════════ -->
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="js/main.js"></script>
+</body>
+</html>

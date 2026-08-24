@@ -1,0 +1,67 @@
+/* Layer diagram and file-structure tree.
+   Part of the Shaiden Pillay portfolio stylesheet.
+   Load order is fixed in index.html — the cascade depends on it. */
+
+/* architecture diagram */
+.arch-diagram {
+  display: flex; flex-direction: column; align-items: center;
+  gap: 0; width: 100%;
+}
+.arch-layer {
+  width: 100%;
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius);
+  padding: .95rem 1.1rem;
+  background: var(--surface);
+}
+.arch-layer-fe { border-color: color-mix(in srgb, var(--accent) 35%, var(--border)); background: color-mix(in srgb, var(--accent-soft) 60%, var(--surface)); }
+.arch-layer-be { border-color: color-mix(in srgb, var(--accent) 20%, var(--border)); background: var(--surface); }
+.arch-layer-db { border-color: color-mix(in srgb, var(--accent) 25%, var(--border)); background: color-mix(in srgb, var(--accent-soft) 30%, var(--surface)); }
+.arch-layer-label {
+  font-family: var(--font-mono); font-size: .68rem; font-weight: 600;
+  letter-spacing: .1em; text-transform: uppercase;
+  color: var(--accent); margin-bottom: .55rem;
+}
+.arch-layer-chips { display: flex; flex-wrap: wrap; gap: .35rem; }
+.arch-chip {
+  display: inline-block;
+  padding: .22rem .55rem;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  font-size: .78rem; color: var(--text-2);
+}
+.arch-arrow {
+  display: flex; align-items: center; justify-content: center;
+  width: 2px; height: 24px;
+  background: linear-gradient(to bottom, var(--accent), var(--accent-2));
+  margin: 0 auto;
+  position: relative;
+}
+.arch-arrow::after {
+  content: "";
+  position: absolute; bottom: -5px;
+  width: 0; height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 6px solid var(--accent-2);
+}
+
+/* file structure */
+.arch-tree {
+  margin: 0;
+  padding: 1rem 1.1rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: var(--bg-alt);
+  font-family: var(--font-mono);
+  font-size: .78rem;
+  line-height: 1.75;
+  color: var(--text-2);
+  overflow-x: auto;
+  white-space: pre;
+  tab-size: 2;
+}
+/* trailing note after two spaces reads as a comment */
+.arch-tree .t-note { color: var(--text-muted); opacity: .8; }
+.arch-tree .t-dir  { color: var(--text); font-weight: 500; }

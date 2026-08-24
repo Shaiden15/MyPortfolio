@@ -1,0 +1,76 @@
+/* Skills grid, education list, certifications.
+   Part of the Shaiden Pillay portfolio stylesheet.
+   Load order is fixed in index.html — the cascade depends on it. */
+
+/* ══ 7. Skills, education, contact ═══════════════════════ */
+
+.skill-grid {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem; margin-top: 2.75rem;
+}
+.skill-card {
+  padding: 1.4rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  transition: border-color .3s var(--ease);
+}
+.skill-card:hover { border-color: color-mix(in srgb, var(--accent) 30%, var(--border)); }
+.skill-card h3 {
+  display: flex; align-items: baseline; gap: .65rem;
+  font-size: .98rem; margin-bottom: .3rem;
+}
+.skill-num { font-family: var(--font-mono); font-size: .68rem; color: var(--accent); }
+
+.edu { padding: 1.2rem 0; border-top: 1px solid var(--border); }
+.edu:first-child { border-top: none; padding-top: 0; }
+.edu h3 { font-size: 1.05rem; }
+.edu-org { color: var(--text-2); font-size: .92rem; margin: .3rem 0 0; }
+.edu-date { font-family: var(--font-mono); font-size: .77rem; color: var(--text-muted); margin: .2rem 0 0; }
+
+.certs li {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: center; gap: .85rem;
+  padding: .8rem 0;
+  border-top: 1px solid var(--border);
+  font-size: .92rem; color: var(--text-2);
+}
+.cert-icon {
+  display: grid; place-items: center;
+  width: 30px; height: 30px; border-radius: 8px;
+  background: var(--accent-soft); color: var(--accent);
+}
+.cert-icon svg { width: 15px; height: 15px; }
+.cert-year { font-family: var(--font-mono); font-size: .76rem; color: var(--text-muted); }
+
+.section-contact { position: relative; overflow: hidden; text-align: center; }
+.contact-glow {
+  position: absolute; inset: auto 0 -40% 0; height: 420px;
+  background: radial-gradient(50% 60% at 50% 100%, var(--orb-a), transparent 70%);
+  pointer-events: none;
+}
+.section-contact .wrap { position: relative; }
+.section-contact .eyebrow { justify-content: center; }
+.section-contact h2 {
+  font-size: clamp(2rem, 5.5vw, 3.4rem); font-weight: 800;
+  letter-spacing: -.045em; margin-bottom: 1.15rem;
+}
+.contact-blurb { color: var(--text-muted); font-size: var(--fs-lead); max-width: 46ch; margin: 0 auto 2.25rem; }
+.contact-actions { display: flex; flex-wrap: wrap; gap: .7rem; justify-content: center; margin-bottom: 3rem; }
+
+.contact-list { max-width: 560px; margin-inline: auto; border-top: 1px solid var(--border); text-align: left; }
+.contact-list li {
+  display: grid; grid-template-columns: 110px minmax(0, 1fr);
+  gap: 1rem; padding: .9rem 0;
+  border-bottom: 1px solid var(--border);
+  font-size: .94rem;
+}
+.contact-list li > span:first-child {
+  font-family: var(--font-mono); font-size: .71rem;
+  text-transform: uppercase; letter-spacing: .1em;
+  color: var(--text-muted); align-self: center;
+}
+.contact-list a:hover { text-decoration: underline; text-underline-offset: 4px; }
+.contact-list .plain { color: var(--text-2); }
+@media (max-width: 520px) { .contact-list li { grid-template-columns: 1fr; gap: .1rem; } }

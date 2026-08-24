@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# TODO: update this if you move to a custom domain
+Sitemap: https://shaiden15.github.io/MyPortfolio/sitemap.xml

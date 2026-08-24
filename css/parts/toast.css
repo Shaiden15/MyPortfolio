@@ -1,0 +1,17 @@
+/* Copy confirmation toast.
+   Part of the Shaiden Pillay portfolio stylesheet.
+   Load order is fixed in index.html — the cascade depends on it. */
+
+/* toast */
+.toast {
+  position: fixed; left: 50%; bottom: 2rem; z-index: 250;
+  transform: translate(-50%, 20px);
+  padding: .7rem 1.2rem;
+  border-radius: 999px;
+  background: var(--text); color: var(--bg);
+  font-size: .87rem; font-weight: 500;
+  box-shadow: var(--shadow-pop);
+  opacity: 0; visibility: hidden;
+  transition: opacity .3s var(--ease), transform .3s var(--ease), visibility .3s;
+}
+.toast.is-on { opacity: 1; visibility: visible; transform: translate(-50%, 0); }

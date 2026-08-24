@@ -1,0 +1,54 @@
+/* Contact section and the enquiry form.
+   Part of the Shaiden Pillay portfolio stylesheet.
+   Load order is fixed in index.html — the cascade depends on it. */
+
+/* ══ 13. Contact form ═══════════════════════════════════ */
+
+/* form */
+.contact-form {
+  display: grid; grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  max-width: 620px;
+  margin: 0 auto 3rem;
+  text-align: left;
+}
+.field { display: flex; flex-direction: column; gap: .4rem; }
+.field-wide { grid-column: 1 / -1; }
+.field label {
+  font-family: var(--font-mono); font-size: .71rem;
+  text-transform: uppercase; letter-spacing: .1em;
+  color: var(--text-muted);
+}
+.field input, .field textarea {
+  width: 100%;
+  padding: .7rem .9rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: var(--surface);
+  color: var(--text);
+  font-family: inherit; font-size: .93rem;
+  resize: vertical;
+  transition: border-color .2s var(--ease), box-shadow .2s var(--ease);
+}
+.field input::placeholder, .field textarea::placeholder { color: var(--text-muted); opacity: .6; }
+.field input:focus, .field textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent) 16%, transparent);
+}
+.field input:user-invalid, .field textarea:user-invalid { border-color: #d9544d; }
+
+/* honeypot — hidden from people, reachable by bots */
+.hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+
+.form-foot {
+  grid-column: 1 / -1;
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 1rem; flex-wrap: wrap;
+}
+.form-note { margin: 0; font-size: .84rem; color: var(--text-muted); }
+.form-note.is-ok { color: var(--accent); }
+.form-note.is-bad { color: #d9544d; }
+#cf-submit[aria-busy="true"] { opacity: .6; pointer-events: none; }
+
+@media (max-width: 560px) { .contact-form { grid-template-columns: 1fr; } }
