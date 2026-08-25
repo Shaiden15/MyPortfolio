@@ -1,7 +1,7 @@
 /* Contact form.
 
    Until a Formspree endpoint is wired in, submitting falls back to the
-   visitor's mail client with everything pre-filled — so the form is never a
+   visitor's mail client with everything pre-filled - so the form is never a
    dead end, even unconfigured. */
 
 import { $ } from '../lib/dom.js';
@@ -30,7 +30,7 @@ function mailtoFallback(e) {
 
   window.location.href = 'mailto:' + EMAIL +
     '?subject=' + encodeURIComponent('Portfolio enquiry from ' + name) +
-    '&body=' + encodeURIComponent(`${msg}\n\n— ${name} (${mail})`);
+    '&body=' + encodeURIComponent(`${msg}\n\n- ${name} (${mail})`);
 
   setNote('Opening your mail app…', 'is-ok');
 }
@@ -50,7 +50,7 @@ function submitOverFetch(e, form, endpoint) {
     .then((r) => {
       if (!r.ok) throw new Error(r.status);
       form.reset();
-      setNote('Thanks — I’ll get back to you soon.', 'is-ok');
+      setNote('Thanks - I’ll get back to you soon.', 'is-ok');
     })
     .catch(() => setNote('Something went wrong. Email me directly instead.', 'is-bad'))
     .then(() => btn.removeAttribute('aria-busy'));

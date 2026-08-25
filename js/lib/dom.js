@@ -1,5 +1,5 @@
 /* Tiny DOM helpers shared by every module.
-   Deliberately not a library — just the three things we reach for. */
+   Deliberately not a library - just the three things we reach for. */
 
 export function $(sel, ctx) {
   return (ctx || document).querySelector(sel);

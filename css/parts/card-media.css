@@ -1,6 +1,6 @@
 /* Screenshot slots and their initials placeholder.
    Part of the Shaiden Pillay portfolio stylesheet.
-   Load order is fixed in index.html — the cascade depends on it. */
+   Load order is fixed in index.html - the cascade depends on it. */
 
 /* ══ 11. Card media (screenshots) ════════════════════════ */
 
@@ -47,7 +47,7 @@
 /* Stretch the whole screenshot across the slot.
 
    Shows every pixel with no crop and no letterbox, at the cost of distorting
-   the aspect ratio — these shots are roughly 1.97 wide against a 1.6 slot, so
+   the aspect ratio - these shots are roughly 1.97 wide against a 1.6 slot, so
    they stretch about 23% vertically. Use only where that reads acceptably;
    `.is-contain` is the undistorted alternative. */
 .card-media.is-fill img {
@@ -59,7 +59,7 @@
 /* Fit the whole screenshot into the slot rather than cropping it.
 
    For portrait mobile captures, where stretching to fill would distort them
-   beyond recognition. The slot stays 16/10 so the grid keeps its rhythm — the
+   beyond recognition. The slot stays 16/10 so the grid keeps its rhythm - the
    image is letterboxed inside it. */
 .card-media.is-contain {
   background: var(--bg-alt);

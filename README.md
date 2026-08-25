@@ -1,6 +1,6 @@
 # MyPortfolio
 
-Personal website for Shaiden Pillay. Static — plain HTML, CSS and vanilla JS.
+Personal website for Shaiden Pillay. Static - plain HTML, CSS and vanilla JS.
 No build step, no dependencies, no framework.
 
 ## Structure
@@ -10,7 +10,7 @@ index.html              all markup, section by section
 404.html                not-found page (GitHub Pages picks this up automatically)
 
 css/parts/              one file per concern; load order in index.html IS the cascade
-  tokens.css              every colour, font and scale — change these, change the site
+  tokens.css              every colour, font and scale - change these, change the site
   base.css                reset, typography, shared utilities
   header.css              sticky header, nav, mobile drawer
   hero.css                hero panel, stats, rotating role
@@ -27,7 +27,7 @@ css/parts/              one file per concern; load order in index.html IS the ca
   motion.css              scroll reveal, reduced motion, print
 
 js/
-  main.js                 entry point — decides what runs, in what order
+  main.js                 entry point - decides what runs, in what order
   lib/                    shared helpers with no feature knowledge
     dom.js                  $, $$, escapeHtml, reduced-motion flag
     dialogs.js              scroll lock, dismiss wiring, cleanup
@@ -42,24 +42,24 @@ js/
     chrome.js  lightbox.js  contact-form.js  deep-links.js  shortcuts.js
 
 assets/og-image.png     link-preview card for social/Slack/WhatsApp shares
-assets/shots/           project screenshots — see the README in that folder
+assets/shots/           project screenshots - see the README in that folder
 robots.txt              crawler rules
 sitemap.xml             one-URL sitemap
 ```
 
-Every CSS and JS file is under 200 lines. `index.html` is not — markup cannot
+Every CSS and JS file is under 200 lines. `index.html` is not - markup cannot
 be split without a build step or client-side rendering, and this site
 deliberately has neither. Its content is markup, not logic.
 
 **`js/main.js` is an ES module**, so the site must be served over http(s).
 Opening `index.html` straight off the filesystem will load the CSS but not
-the JS — use the local server below.
+the JS - use the local server below.
 
 ## Features
 
 | Feature | Notes |
 |---|---|
-| Command palette | `Ctrl`/`Cmd`+`K` — searches sections, projects, tech tags, actions |
+| Command palette | `Ctrl`/`Cmd`+`K` - searches sections, projects, tech tags, actions |
 | Keyboard shortcuts | `?` for the list; `T` theme, `G`+`W`/`C`/`A`/`S`/`T` to jump |
 | Project filtering | chips filter the 12 cards by category |
 | Case-study modals | full detail per project, with shareable deep links |
@@ -73,13 +73,13 @@ the JS — use the local server below.
 | SEO | JSON-LD `Person`, Open Graph, Twitter card, canonical, sitemap |
 | Print stylesheet | `Ctrl`+`P` gives a clean CV printout |
 
-Everything degrades gracefully — with JS disabled the page is still fully readable.
+Everything degrades gracefully - with JS disabled the page is still fully readable.
 
 ## Setup checklist
 
 One thing still needs your input before publishing:
 
-1. **Contact form** — sign up at [formspree.io](https://formspree.io), create a
+1. **Contact form** - sign up at [formspree.io](https://formspree.io), create a
    form, and replace `YOUR_FORM_ID` in the `<form action>` in `index.html`.
    Until then the form falls back to opening the visitor's mail client with the
    message pre-filled, so it is never a dead end.
@@ -89,7 +89,7 @@ Already done: LinkedIn URL, all twelve project screenshots, and the CV
 
 Optional but worth doing:
 
-- **Replace the CV** by overwriting `assets/Shaiden_Pillay_CV.pdf` — both
+- **Replace the CV** by overwriting `assets/Shaiden_Pillay_CV.pdf` - both
   download buttons point at that fixed path, so nothing else needs touching.
 - Two screenshots could be better: Peer-to-Peer Tutoring still includes the
   Android Studio window chrome, and AwehPay is a splash screen rather than a
@@ -99,7 +99,7 @@ Optional but worth doing:
 
 ## Run it locally
 
-You must serve it — do not open `index.html` off the filesystem. ES modules are
+You must serve it - do not open `index.html` off the filesystem. ES modules are
 blocked over `file://`, so the JS would silently not run.
 
 ```bash
@@ -122,7 +122,7 @@ The dark palette lives in the `[data-theme="dark"]` block in the same file.
 3. Optionally add an entry to `js/data/architecture.js` for the layer diagram,
    and `js/data/file-trees.js` for the file structure.
 
-Both data files are keyed by **slug** — the title lowercased with non-alphanumerics
+Both data files are keyed by **slug** - the title lowercased with non-alphanumerics
 collapsed to hyphens (`GovGuide SA` → `govguide-sa`). `js/lib/slug.js` owns that
 rule and both the deep links and the data lookups use it, so they cannot drift.
 
@@ -134,7 +134,7 @@ filter chips.
 ### Adding a module
 
 Create it in `js/modules/`, export a single `init` function, and call that from
-`js/main.js`. Modules should bail quietly when their markup is absent — that is
+`js/main.js`. Modules should bail quietly when their markup is absent - that is
 what keeps the page working when a section is removed.
 
 Shared helpers live in `js/lib/` and must not import from `js/modules/`; keeping

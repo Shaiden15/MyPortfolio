@@ -12,7 +12,7 @@ function remember(value) {
   try {
     localStorage.setItem('theme', value);
   } catch (e) {
-    /* private mode — the choice still applies for this session */
+    /* private mode - the choice still applies for this session */
   }
 }
 

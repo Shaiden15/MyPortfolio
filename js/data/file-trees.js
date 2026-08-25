@@ -3,7 +3,7 @@
    Two spaces separate a path from its trailing note; the renderer splits
    on that and dims the note.
 
-   Production systems are deliberately absent — their internal layout is
+   Production systems are deliberately absent - their internal layout is
    not ours to publish. */
 
 export const FILE_TREES = {

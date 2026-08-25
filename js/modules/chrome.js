@@ -37,7 +37,7 @@ export function initDrawer() {
   });
 }
 
-/* SAST is UTC+2 year-round — no DST to account for. */
+/* SAST is UTC+2 year-round - no DST to account for. */
 export function initClock() {
   const clock = $('#clock');
   if (!clock) return;

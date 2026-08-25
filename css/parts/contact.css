@@ -1,6 +1,6 @@
 /* Contact section and the enquiry form.
    Part of the Shaiden Pillay portfolio stylesheet.
-   Load order is fixed in index.html — the cascade depends on it. */
+   Load order is fixed in index.html - the cascade depends on it. */
 
 /* ══ 13. Contact form ═══════════════════════════════════ */
 
@@ -38,7 +38,7 @@
 }
 .field input:user-invalid, .field textarea:user-invalid { border-color: #d9544d; }
 
-/* honeypot — hidden from people, reachable by bots */
+/* honeypot - hidden from people, reachable by bots */
 .hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
 
 .form-foot {

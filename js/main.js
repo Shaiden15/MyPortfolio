@@ -1,13 +1,13 @@
-/* Shaiden Pillay — portfolio
+/* Shaiden Pillay - portfolio
    ------------------------------------------------------------
    Entry point. Every feature lives in its own module and exposes a single
    init function; this file just decides what runs and in what order.
 
-   Progressive enhancement throughout — with JS disabled the page is still
+   Progressive enhancement throughout - with JS disabled the page is still
    fully readable, and every module bails quietly if its markup is absent.
 
    Note: this is an ES module, so it must be served over http(s).
-   Opening index.html directly from the filesystem will not run it —
+   Opening index.html directly from the filesystem will not run it -
    see the README for the one-line local server. */
 
 import { initTheme } from './modules/theme.js';
@@ -23,7 +23,7 @@ import { initContactForm } from './modules/contact-form.js';
 import { initDeepLinks } from './modules/deep-links.js';
 import { initShortcuts } from './modules/shortcuts.js';
 
-/* Theme first — it sets an attribute on <html> and we want that resolved
+/* Theme first - it sets an attribute on <html> and we want that resolved
    before anything paints. */
 initTheme();
 

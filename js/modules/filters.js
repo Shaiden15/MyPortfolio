@@ -1,7 +1,7 @@
 /* Category chips over the project grid.
 
    Categories come from each card's data-cat, so adding a project needs no
-   change here — only a new chip in the markup if the category is new. */
+   change here - only a new chip in the markup if the category is new. */
 
 import { $, $$ } from '../lib/dom.js';
 

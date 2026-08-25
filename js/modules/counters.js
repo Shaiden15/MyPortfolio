@@ -1,4 +1,4 @@
-/* Hero stat counters — count up when scrolled into view. */
+/* Hero stat counters - count up when scrolled into view. */
 
 import { $$, reduced } from '../lib/dom.js';
 
@@ -17,7 +17,7 @@ function run(el) {
   function step(now) {
     if (start === null) start = now;
     const p = Math.min((now - start) / DURATION, 1);
-    /* easeOutExpo — fast, then settles */
+    /* easeOutExpo - fast, then settles */
     const eased = p === 1 ? 1 : 1 - Math.pow(2, -10 * p);
     el.textContent = Math.round(target * eased);
     if (p < 1) window.requestAnimationFrame(step);
@@ -45,7 +45,7 @@ export function initCounters() {
 
   counters.forEach((el) => io.observe(el));
 
-  /* Same failsafe as the scroll reveal — a stat stuck on 0 reads as broken. */
+  /* Same failsafe as the scroll reveal - a stat stuck on 0 reads as broken. */
   window.setTimeout(() => {
     counters.forEach((el) => {
       if (el.textContent === '0') el.textContent = el.getAttribute('data-count');

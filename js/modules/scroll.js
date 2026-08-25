@@ -84,8 +84,8 @@ export function initReveal() {
     io.observe(el);
   });
 
-  /* Failsafe: if the observer never fires — a background tab on load, a
-     browser quirk, a page that never composites — the content would sit at
+  /* Failsafe: if the observer never fires - a background tab on load, a
+     browser quirk, a page that never composites - the content would sit at
      opacity 0 forever. Never let that happen. */
   window.setTimeout(() => {
     if (document.querySelector('.reveal.is-in')) return;

@@ -1,5 +1,5 @@
 /* Renders the two architecture views: the stacked layer diagram and the
-   file-structure tree. Pure builders — they take data and return an element,
+   file-structure tree. Pure builders - they take data and return an element,
    touching no global state, so the PDF export can reuse the same shapes. */
 
 const LAYERS = [
@@ -42,7 +42,7 @@ export function buildDiagram(arch) {
     box.appendChild(chips);
     wrap.appendChild(box);
 
-    /* one arrow between each pair — never a trailing one */
+    /* one arrow between each pair - never a trailing one */
     if (i < present.length - 1) {
       const arrow = document.createElement('div');
       arrow.className = 'arch-arrow';
@@ -54,7 +54,7 @@ export function buildDiagram(arch) {
 }
 
 /* Indentation is built from spaces and box-drawing glyphs, so skip past that
-   prefix before looking for the note separator — otherwise a line like
+   prefix before looking for the note separator - otherwise a line like
    "│  ├─ src/" splits inside its own indentation. */
 const TREE_PREFIX = /^[\s│├└─]*/;
 

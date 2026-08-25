@@ -97,7 +97,7 @@ export function openDetail(card) {
   $('#detail-role').textContent = current.role;
 
   /* only offer a view that has something behind it, and open on the first
-     one that does — not every project carries all three */
+     one that does - not every project carries all three */
   $$('.view-btn', $('#detail-view-toggle')).forEach((b) => {
     b.hidden = !hasView(b.getAttribute('data-view'));
   });

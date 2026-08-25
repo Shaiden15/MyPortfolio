@@ -1,7 +1,7 @@
 /* Project screenshots and their lightbox.
 
    A screenshot that has not been added yet must never render as a broken
-   image — the card falls through to the CSS initials placeholder instead.
+   image - the card falls through to the CSS initials placeholder instead.
    Images therefore start hidden and are only revealed once JS confirms a
    real one loaded. */
 
@@ -34,7 +34,7 @@ function wireMedia(media) {
 
     /* Hand the blurred letterbox backdrop its image. This is set here rather
        than in the markup because a relative url() inside a custom property
-       resolves against the stylesheet, not the document — it would look for
+       resolves against the stylesheet, not the document - it would look for
        css/parts/assets/shots/… and 404. currentSrc is already absolute. */
     if (media.classList.contains('is-contain')) {
       media.style.setProperty('--shot', 'url("' + (img.currentSrc || img.src) + '")');

@@ -35,7 +35,7 @@ export function shut(d) {
 
 /* Wire the two ways every dialog can be dismissed.
 
-   Backdrop detection compares the event target against the dialog itself —
+   Backdrop detection compares the event target against the dialog itself -
    a backdrop click targets the dialog element, anything inside targets a
    child. Do NOT test pointer coordinates: keyboard activation reports 0,0,
    which reads as a backdrop click and would close the dialog on every
@@ -52,7 +52,7 @@ export function wireDismiss(dialog, closeBtn) {
   dialog.addEventListener('close', syncDialogs);
 }
 
-/* Escape closes dialogs natively — re-sync on the next tick. */
+/* Escape closes dialogs natively - re-sync on the next tick. */
 export function initDialogs() {
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') window.setTimeout(syncDialogs, 0);

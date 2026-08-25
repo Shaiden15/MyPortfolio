@@ -26,7 +26,7 @@ export function viewLabel(view) {
   return VIEW_LABEL[view] || '';
 }
 
-/* Durban time, matching the clock in the hero — SAST is UTC+2 year-round. */
+/* Durban time, matching the clock in the hero - SAST is UTC+2 year-round. */
 function generatedStamp() {
   const now = new Date();
   const sast = new Date(now.getTime() + (now.getTimezoneOffset() + 120) * 60000);
@@ -72,7 +72,7 @@ function buildPrintDoc(project, view) {
     : '';
 
   return `<!DOCTYPE html><html><head><meta charset="utf-8">` +
-    `<title>${escapeHtml(project.title + ' — ' + section)} — Shaiden Pillay</title>` +
+    `<title>${escapeHtml(project.title + ' - ' + section)} - Shaiden Pillay</title>` +
     `<style>${PDF_CSS}</style></head><body>` +
     `<header>` +
       `<p class="doc-kicker">${escapeHtml(section)}</p>` +
@@ -113,10 +113,10 @@ export function exportPdf(project, view) {
   doc.write(buildPrintDoc(project, view));
   doc.close();
 
-  /* The save dialog names the file after the document title — but browsers
+  /* The save dialog names the file after the document title - but browsers
      disagree about whose title wins when printing an iframe, so borrow the
      parent's for the duration and hand it back afterwards. */
-  document.title = `${project.title} — ${viewLabel(view)} — Shaiden Pillay`;
+  document.title = `${project.title} - ${viewLabel(view)} - Shaiden Pillay`;
 
   let gone = false;
   function cleanup() {

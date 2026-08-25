@@ -19,7 +19,7 @@ export function copy(text) {
   if (navigator.clipboard && window.isSecureContext) {
     navigator.clipboard.writeText(text).then(
       () => say('Copied ' + text),
-      () => say('Copy failed — ' + text)
+      () => say('Copy failed - ' + text)
     );
     return;
   }
