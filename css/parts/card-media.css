@@ -39,6 +39,61 @@
 .card-media.has-shot { cursor: zoom-in; }
 .card:hover .card-media.has-shot img { transform: scale(1.04); }
 
+/* Once a real screenshot is in, the initials placeholder must go. Under
+   `cover` the image hid it anyway, but `.is-contain` leaves gaps it would
+   show through. */
+.card-media.has-shot::after { content: none; }
+
+/* Stretch the whole screenshot across the slot.
+
+   Shows every pixel with no crop and no letterbox, at the cost of distorting
+   the aspect ratio — these shots are roughly 1.97 wide against a 1.6 slot, so
+   they stretch about 23% vertically. Use only where that reads acceptably;
+   `.is-contain` is the undistorted alternative. */
+.card-media.is-fill img {
+  object-fit: fill;
+  padding: 0;
+}
+.card:hover .card-media.is-fill img { transform: none; }
+
+/* Fit the whole screenshot into the slot rather than cropping it.
+
+   For portrait mobile captures, where stretching to fill would distort them
+   beyond recognition. The slot stays 16/10 so the grid keeps its rhythm — the
+   image is letterboxed inside it. */
+.card-media.is-contain {
+  background: var(--bg-alt);
+}
+.card-media.is-contain img {
+  object-fit: contain;
+  object-position: center;
+  padding: .55rem;
+}
+/* the hover zoom would crop exactly what contain just made room for */
+.card:hover .card-media.is-contain img { transform: none; }
+
+/* Fill the letterbox with a blurred copy of the shot.
+
+   A portrait phone capture in a 16/10 slot covers barely a third of it, and
+   the bare ground reads as a mistake. The blurred fill sits behind the image
+   (which carries z-index 1) and comes from --shot, set per card in the
+   markup. Scaled up so the blur's soft edge never shows. */
+.card-media.is-contain.has-shot::after {
+  content: "";
+  position: absolute; inset: 0;
+  background-image: var(--shot);
+  background-size: cover;
+  background-position: center;
+  filter: blur(22px) saturate(1.25);
+  transform: scale(1.2);
+  opacity: .45;
+}
+[data-theme="dark"] .card-media.is-contain.has-shot::after { opacity: .3; }
+
+@media (prefers-reduced-motion: reduce) {
+  .card-media.is-contain.has-shot::after { filter: blur(22px); }
+}
+
 .card-media.has-shot::before {
   content: "";
   position: absolute; inset: 0; z-index: 2;

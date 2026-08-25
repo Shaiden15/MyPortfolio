@@ -78,6 +78,23 @@
 [data-theme="dark"] #theme-toggle .icon-sun { opacity: 0; transform: rotate(60deg) scale(.6); }
 [data-theme="dark"] #theme-toggle .icon-moon { opacity: 1; transform: none; }
 
+/* Download CV — the one action a recruiter is most likely to want, so it
+   carries the accent rather than sitting quiet like the icon buttons. */
+.cv-btn {
+  display: inline-flex; align-items: center; gap: .45rem;
+  flex-shrink: 0;
+  height: 36px;
+  padding: 0 .85rem;
+  border-radius: 999px;
+  background: var(--accent);
+  color: var(--on-accent);
+  font-size: .82rem; font-weight: 500;
+  white-space: nowrap;
+  transition: background .2s var(--ease), transform .2s var(--ease);
+}
+.cv-btn:hover { background: var(--accent-2); transform: translateY(-1px); }
+.cv-btn svg { width: 15px; height: 15px; flex-shrink: 0; }
+
 .menu-btn { display: none; }
 
 @media (max-width: 1040px) { .cmdk-hint, .cmdk-trigger kbd { display: none; }
@@ -87,6 +104,9 @@
   .nav { display: none; }
   .menu-btn { display: grid; }
   .brand-text { display: none; }
+  /* collapse to a circular icon so the header still fits */
+  .cv-btn-text { display: none; }
+  .cv-btn { padding: 0; width: 36px; height: 36px; justify-content: center; }
 }
 
 /* mobile drawer */

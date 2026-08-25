@@ -2,7 +2,7 @@
    file-structure tree. Pure builders — they take data and return an element,
    touching no global state, so the PDF export can reuse the same shapes. */
 
-export const LAYERS = [
+const LAYERS = [
   { key: 'fe', label: 'Frontend' },
   { key: 'be', label: 'Backend / Services' },
   { key: 'db', label: 'Data' }
@@ -58,7 +58,7 @@ export function buildDiagram(arch) {
    "│  ├─ src/" splits inside its own indentation. */
 const TREE_PREFIX = /^[\s│├└─]*/;
 
-export function splitTreeLine(line) {
+function splitTreeLine(line) {
   const prefix = (line.match(TREE_PREFIX) || [''])[0].length;
   const at = line.indexOf('  ', prefix);
   return at === -1

@@ -71,7 +71,23 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/styles.css">
+<!-- Stylesheet partials. Order is the cascade — do not shuffle these.
+     Separate <link>s rather than @import so they download in parallel. -->
+<link rel="stylesheet" href="css/parts/tokens.css">
+<link rel="stylesheet" href="css/parts/base.css">
+<link rel="stylesheet" href="css/parts/header.css">
+<link rel="stylesheet" href="css/parts/hero.css">
+<link rel="stylesheet" href="css/parts/sections.css">
+<link rel="stylesheet" href="css/parts/cards.css">
+<link rel="stylesheet" href="css/parts/card-media.css">
+<link rel="stylesheet" href="css/parts/skills.css">
+<link rel="stylesheet" href="css/parts/buttons.css">
+<link rel="stylesheet" href="css/parts/contact.css">
+<link rel="stylesheet" href="css/parts/modal.css">
+<link rel="stylesheet" href="css/parts/architecture.css">
+<link rel="stylesheet" href="css/parts/palette.css">
+<link rel="stylesheet" href="css/parts/toast.css">
+<link rel="stylesheet" href="css/parts/motion.css">
 </head>
 <body>
 
@@ -103,6 +119,14 @@
         <span class="cmdk-hint">Search</span>
         <kbd>Ctrl K</kbd>
       </button>
+
+      <!-- `download` serves the file as-is rather than opening it in the
+           browser's PDF viewer -->
+      <a class="cv-btn" href="assets/Shaiden_Pillay_CV.pdf" download="Shaiden_Pillay_CV.pdf"
+         aria-label="Download CV as PDF">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12M7.5 10.5L12 15l4.5-4.5M5 20h14"/></svg>
+        <span class="cv-btn-text">Download CV</span>
+      </a>
 
       <button class="icon-btn" id="theme-toggle" type="button" aria-label="Toggle colour theme">
         <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2v2.6M12 19.4V22M2 12h2.6M19.4 12H22M4.9 4.9l1.9 1.9M17.2 17.2l1.9 1.9M19.1 4.9l-1.9 1.9M6.8 17.2l-1.9 1.9"/></svg>
@@ -181,8 +205,10 @@
             <svg class="btn-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="9" y="9" width="11" height="11" rx="2.5"/><path d="M5 15V6.5A2.5 2.5 0 017.5 4H15"/></svg>
             Copy email
           </button>
-          <!-- TODO: drop your PDF in /assets and uncomment -->
-          <!-- <a class="btn" href="assets/Shaiden_Pillay_CV.pdf" download>Download CV</a> -->
+          <a class="btn" href="assets/Shaiden_Pillay_CV.pdf" download="Shaiden_Pillay_CV.pdf">
+            <svg class="btn-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12M7.5 10.5L12 15l4.5-4.5M5 20h14"/></svg>
+            Download CV
+          </a>
         </div>
       </div>
 
@@ -376,7 +402,7 @@
 
         <!-- Biometrics24-7 -->
         <article class="card" data-cat="production work" data-title="Biometrics24-7">
-          <div class="card-media" data-initials="B7">
+          <div class="card-media is-fill" data-initials="B7">
             <img src="assets/shots/biometrics24-7.png" alt="Biometrics24-7 screenshot" loading="lazy" decoding="async" width="640" height="400">
           </div>
           <div class="card-top">
@@ -468,7 +494,7 @@
 
         <!-- AwehPay -->
         <article class="card" data-cat="mobile work" data-title="AwehPay">
-          <div class="card-media" data-initials="A">
+          <div class="card-media is-contain" data-initials="A">
             <img src="assets/shots/awehpay.png" alt="AwehPay screenshot" loading="lazy" decoding="async" width="640" height="400">
           </div>
           <div class="card-top">
@@ -499,7 +525,8 @@
         <!-- MediIntel -->
         <article class="card" data-cat="work" data-title="MediIntel">
           <div class="card-media" data-initials="M">
-            <img src="assets/shots/mediintel.png" alt="MediIntel screenshot" loading="lazy" decoding="async" width="640" height="400">
+            <!-- JPEG, not PNG: this shot is photographic, so JPEG is a fifth the size -->
+            <img src="assets/shots/mediintel.jpg" alt="MediIntel screenshot" loading="lazy" decoding="async" width="640" height="400">
           </div>
           <div class="card-top">
             <span class="card-index" aria-hidden="true">06</span>
@@ -525,7 +552,7 @@
 
         <!-- GovGuide SA -->
         <article class="card" data-cat="personal ai" data-title="GovGuide SA">
-          <div class="card-media" data-initials="GS">
+          <div class="card-media is-fill" data-initials="GS">
             <img src="assets/shots/govguide-sa.png" alt="GovGuide SA screenshot" loading="lazy" decoding="async" width="640" height="400">
           </div>
           <div class="card-top">
@@ -628,7 +655,8 @@
         <!-- SVG Converter -->
         <article class="card" data-cat="personal" data-title="SVG Converter">
           <div class="card-media" data-initials="SC">
-            <img src="assets/shots/svg-converter.png" alt="SVG Converter screenshot" loading="lazy" decoding="async" width="640" height="400">
+            <!-- JPEG, not PNG: a smooth gradient, which PNG stores poorly -->
+            <img src="assets/shots/svg-converter.jpg" alt="SVG Converter screenshot" loading="lazy" decoding="async" width="640" height="400">
           </div>
           <div class="card-top">
             <span class="card-index" aria-hidden="true">11</span>
@@ -648,7 +676,7 @@
 
         <!-- Tutoring -->
         <article class="card" data-cat="personal mobile" data-title="Peer-to-Peer Tutoring">
-          <div class="card-media" data-initials="PT">
+          <div class="card-media is-contain" data-initials="PT">
             <img src="assets/shots/peer-to-peer-tutoring.png" alt="Peer-to-Peer Tutoring screenshot" loading="lazy" decoding="async" width="640" height="400">
           </div>
           <div class="card-top">
@@ -938,6 +966,6 @@
 <!-- ══ Toast ═══════════════════════════════════════════ -->
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
-<script src="js/main.js"></script>
+<script type="module" src="js/main.js"></script>
 </body>
 </html>
